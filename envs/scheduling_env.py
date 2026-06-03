@@ -100,3 +100,12 @@ class SchedulingEnv(gym.Env):
             truncated,
             {}
         )
+env = SchedulingEnv()
+
+obs, info = env.reset()
+
+action = env.action_space.sample()
+
+obs, reward, terminated, truncated, info = env.step(action)
+
+print("Environment Running Successfully!")
